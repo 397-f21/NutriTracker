@@ -73,6 +73,7 @@ const SearchBar = ({ data, foods, setFoods }) => {
           style={{ marginLeft: '10px' }}
           type='button'
           className='btn btn-outline-secondary'
+          data-testid='clear-button'
           onClick={() => {
             setFoods([]);
           }}

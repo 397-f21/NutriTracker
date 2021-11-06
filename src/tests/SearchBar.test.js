@@ -65,4 +65,14 @@ describe('search bar tests', () => {
 
     expect(getByTestId('search-bar'));
   });
+
+  // Test for the Clear button
+  test('Testing the Clear Button', async () => {
+    const { getByTestId } = render(
+      <SearchBar data={data} foods={foods} setFoods={setFoods} />
+    );
+      const button = getByTestId('clear-button');
+      userEvent.click(button);
+      expect(foods).toEqual([]);
+   });
 });
